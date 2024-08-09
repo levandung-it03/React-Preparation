@@ -1,0 +1,12 @@
+
+div.password-eyes {
+  position: absolute;
+  background-color: red;
+  color: #333;
+  font-size: 30px;
+}
+
+i.hide-pass,
+i.show-pass {
+  cursor: pointer;
+}
