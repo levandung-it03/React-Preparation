@@ -12,6 +12,7 @@ function App() {
     .autoComplete(INP_ENUM.PROPS.AUTO_COMPLETE.OFF)
     .required(true)
     .orderedValidators([
+      { check: (v) => (v.length !== 0), errMsg: "Content can not be empty" },
       { check: (v) => (/^ *[A-Za-zÀ-ỹ]{1,50}( *[A-Za-zÀ-ỹ]{1,50})* *$/.test(v)), errMsg: "Content must be text" },
       { check: (v) => (v.length > 9), errMsg: "Content too short" },
     ])
