@@ -92,7 +92,7 @@ function InputReactBuilder() {
     //--This field is used to build validators in order of validatorObjects in configurations array.
     orderedValidators(configs) { this.validators = configs; return this; },
     moreFeaturesOnBlur(callbacks) { this.features = callbacks; return this; },
-    subComponents(compos) { this.subCompos = compos; return this; },
+    addSubComponents(compos) { this.subCompos.push(...compos); return this; },
     build() {
       const rootObj = this;
       //--Give TempCompo an uppercase name to serve react-rules.
