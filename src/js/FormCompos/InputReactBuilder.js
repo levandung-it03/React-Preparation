@@ -54,7 +54,7 @@ function buildSupportCompos(rootObj) {
       };
 
       rootObj.subCompos.push(
-        <div className="password-eyes">
+        <div className="password-eyes" key={new Date().getMilliseconds}>
           <i onClick={handleOnClickToHide} className="hide-pass HIDE">-----</i>
           <i onClick={handleOnClickToShow} className="show-pass">OOOOO</i>
         </div>
