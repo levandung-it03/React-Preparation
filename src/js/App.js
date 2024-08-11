@@ -1,6 +1,7 @@
 import '../css/App.css';
 import { INP_ENUM, InputReactBuilder } from './FormCompos';
 import { FORM_ENUM, FormReactBuilder } from './FormCompos';
+import { EAXT_ENUM, TextareaReactBuilder } from './FormCompos';
 
 function App() {
   const FullNameInpCompo = InputReactBuilder()
@@ -28,9 +29,21 @@ function App() {
     ])
     .build();
 
+  const Description = TextareaReactBuilder()
+    .label("Description")
+    .name("description")
+    .cols(20)
+    .rows(3)
+    .placeholder("Type description here")
+    .required(true)
+    .value("My name is BlaBlaBla")
+    .moreFeaturesOnBlur([ EAXT_ENUM.FEATURES.AUTO_CAPITALIZE ])
+    .build();
+
   const FormCompo = FormReactBuilder()
     .addFormChild(FullNameInpCompo)
     .addFormChild(DOBInpCompo)
+    .addFormChild(Description)
     .method("post")
     .action("")
     .build();

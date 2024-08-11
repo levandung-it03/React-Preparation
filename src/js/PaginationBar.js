@@ -1,5 +1,4 @@
 
-
 function PaginationBar({ pageRef, totalPages, onPageChange }) {
   const pageButtons = [];
   const handleClickNext = (e) => {
